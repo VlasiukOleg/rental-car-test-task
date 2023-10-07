@@ -1,16 +1,26 @@
+
+import { Routes, Route } from "react-router-dom";
+import { SharedLayout
+ } from "./SharedLayout/SharedLayout";
+import { lazy } from "react";
+
+
+const WelcomePage = lazy(() => import('../pages/WelcomePage/WelcomePage'));
+const CatalogPage = lazy(() => import('../pages/CatalogPage/CatalogPage'));
+const FavoritesPage= lazy(() => import('../pages/FavoritesPage/FavoritesPage'));
+
+
+
+
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Routes>
+      <Route path="/" element={<SharedLayout/>}>
+        <Route index element={<WelcomePage/>}/>
+        <Route path='cars' element={<CatalogPage/>}/>
+        <Route path='favorite' element={<FavoritesPage/>}/>
+      </Route>
+    </Routes>
   );
 };
