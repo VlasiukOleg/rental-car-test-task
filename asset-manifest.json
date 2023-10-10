@@ -1,19 +1,23 @@
 {
   "files": {
     "main.css": "/rental-car-test-task/static/css/main.737eef5d.css",
-    "main.js": "/rental-car-test-task/static/js/main.2fad71d2.js",
-    "static/js/123.d18c60ef.chunk.js": "/rental-car-test-task/static/js/123.d18c60ef.chunk.js",
-    "static/js/270.0371eb57.chunk.js": "/rental-car-test-task/static/js/270.0371eb57.chunk.js",
-    "static/js/413.978df305.chunk.js": "/rental-car-test-task/static/js/413.978df305.chunk.js",
+    "main.js": "/rental-car-test-task/static/js/main.0c4734f4.js",
+    "static/js/422.e100a6aa.chunk.js": "/rental-car-test-task/static/js/422.e100a6aa.chunk.js",
+    "static/js/270.e0bd5844.chunk.js": "/rental-car-test-task/static/js/270.e0bd5844.chunk.js",
+    "static/js/413.057fe260.chunk.js": "/rental-car-test-task/static/js/413.057fe260.chunk.js",
+    "static/js/706.084362b0.chunk.js": "/rental-car-test-task/static/js/706.084362b0.chunk.js",
+    "static/js/392.3cc4e9df.chunk.js": "/rental-car-test-task/static/js/392.3cc4e9df.chunk.js",
     "index.html": "/rental-car-test-task/index.html",
     "main.737eef5d.css.map": "/rental-car-test-task/static/css/main.737eef5d.css.map",
-    "main.2fad71d2.js.map": "/rental-car-test-task/static/js/main.2fad71d2.js.map",
-    "123.d18c60ef.chunk.js.map": "/rental-car-test-task/static/js/123.d18c60ef.chunk.js.map",
-    "270.0371eb57.chunk.js.map": "/rental-car-test-task/static/js/270.0371eb57.chunk.js.map",
-    "413.978df305.chunk.js.map": "/rental-car-test-task/static/js/413.978df305.chunk.js.map"
+    "main.0c4734f4.js.map": "/rental-car-test-task/static/js/main.0c4734f4.js.map",
+    "422.e100a6aa.chunk.js.map": "/rental-car-test-task/static/js/422.e100a6aa.chunk.js.map",
+    "270.e0bd5844.chunk.js.map": "/rental-car-test-task/static/js/270.e0bd5844.chunk.js.map",
+    "413.057fe260.chunk.js.map": "/rental-car-test-task/static/js/413.057fe260.chunk.js.map",
+    "706.084362b0.chunk.js.map": "/rental-car-test-task/static/js/706.084362b0.chunk.js.map",
+    "392.3cc4e9df.chunk.js.map": "/rental-car-test-task/static/js/392.3cc4e9df.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.737eef5d.css",
-    "static/js/main.2fad71d2.js"
+    "static/js/main.0c4734f4.js"
   ]
 }
