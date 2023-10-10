@@ -20,7 +20,8 @@ const carsInitialState = {
           });
 
         builder.addCase(fetchCars.fulfilled, (state, action) => {
-            state.items = action.payload;
+          const newCars = action.payload.filter(newCar => !state.items.some(existingCar => existingCar.id === newCar.id));
+          state.items = [...state.items, ...newCars];
             state.isLoading = false;
             state.error = null;
           });
