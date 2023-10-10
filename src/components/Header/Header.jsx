@@ -1,19 +1,19 @@
-import { Logo, Nav, PhoneLink, MainLink } from "./Header.styled"
+import { Logo, Nav, PhoneLink, MainLink, HeaderBar, RotatingLogo } from "./Header.styled"
 
 import { FcPhoneAndroid } from "react-icons/fc";
-import { PiBuildingsDuotone} from "react-icons/pi";
+import { GiCartwheel } from "react-icons/gi";
 
 export const Header = () => {
     return (
-        <>
-        <Logo to='/'><PiBuildingsDuotone/>Rental<span>Car</span></Logo>
+        <HeaderBar>
+        <Logo to='/'><RotatingLogo><GiCartwheel size='24px'/></RotatingLogo>Rent <span>-and-</span> Ride</Logo>
         <Nav>
             <ul>
-                <li><MainLink >Cars</MainLink ></li>
-                <li><MainLink >Favorite</MainLink ></li>
+                <li><MainLink to='/catalog'>Cars</MainLink ></li>
+                <li><MainLink to='/favorite'>Favorite</MainLink ></li>
             </ul>  
         </Nav>
-        <PhoneLink to="tel:+380632790437"><FcPhoneAndroid size='24px'/>(063) 279 04 37</PhoneLink>
-        </>
+        <PhoneLink to="tel:+380730000000"><FcPhoneAndroid size='24px'/>(073) 000 00 00</PhoneLink>
+        </HeaderBar>
     )
 }

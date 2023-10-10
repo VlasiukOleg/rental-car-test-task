@@ -1,8 +1,11 @@
-
+import { Container } from "components/Container/Container";
 
 const CatalogPage = () => {
     return (
-        <div>CatalogPage</div>
+        <Container>
+            <div>CatalogPage</div>
+        </Container>
+        
     )
 }
 

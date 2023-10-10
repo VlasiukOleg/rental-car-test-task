@@ -13,7 +13,7 @@ export const MainContainer = styled.div`
   }
   @media screen and (min-width: 1440px) {
     max-width: 1440px;
-    height: 100vh;
-    padding: 20px 128px;
+    /* height: 100vh; */
+    padding: 40px 128px;
   }
 `;
