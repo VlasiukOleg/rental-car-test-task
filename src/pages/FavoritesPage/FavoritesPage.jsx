@@ -1,10 +1,11 @@
 import { Container } from "components/Container/Container";
 
+import { FavoriteCarsList } from "components/FavoriteCarsList/FavoriteCarsList";
 
 const FavoritesPage = () => {
     return (
         <Container>
-        <div>FavoritesPage</div>
+            <FavoriteCarsList/>
         </Container>
         
     )

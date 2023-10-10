@@ -52,7 +52,8 @@ export const CarsList = () => {
      };
 
      const toogleToFavorite = (car) => {
-      if (!favorites.includes(car)) {
+      
+      if (!favorites.find(favCar => favCar.id === car.id)) {
         setFavorites([...favorites, car]);
       } else {
         const updatedFavorites = favorites.filter(favCar => favCar.id !== car.id);
@@ -105,7 +106,7 @@ export const CarsList = () => {
                     <p> {car.address} {car.rentalCompany}</p>
                     <p> {car.type} {car.mileage} {car.accessories[0]}</p>
                     <InfoBtn type='button' onClick={() => toogleModal(car)}>Learn More</InfoBtn>
-                    <FavoriteBtn onClick={() => toogleToFavorite(car)}>{favorites.includes(car) ?  <AiFillHeart size='24px' color='#3470FF'/> : <AiOutlineHeart size='24px' color='#ffffff'/>}</FavoriteBtn>
+                    <FavoriteBtn onClick={() => toogleToFavorite(car)}>{favorites.find(favCar => favCar.id === car.id) ?  <AiFillHeart size='24px' color='#3470FF'/> : <AiOutlineHeart size='24px' color='#ffffff'/>}</FavoriteBtn>
              </CarItem>   
              )) }
         </Cars>
