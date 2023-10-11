@@ -5,8 +5,8 @@ export const LoadingSpinner = () => {
   return (
     <Container>
       <Circles
-      height="80"
-      width="80"
+      height="60"
+      width="60"
       color="rgb(52, 112, 255)"
       ariaLabel="circles-loading"
       wrapperClass="spinner"

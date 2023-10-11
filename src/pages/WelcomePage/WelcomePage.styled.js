@@ -10,7 +10,7 @@ export const WelcomeTitle = styled.h1`
 `
 
     export const WelcomePageWrap = styled.div`
-    padding: 100px 0px;`
+    padding: 55px 0px;`
 
 
 export const LogoWrap = styled.div`

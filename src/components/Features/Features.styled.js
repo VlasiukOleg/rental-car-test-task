@@ -23,7 +23,7 @@ export const ItemWrap = styled.div`
 `
 
 export const FeaturesItem = styled.li`
-font-size: 25px;
+font-size: 16px;
 color: #696969;
 max-width: 200px;
 padding: 20px;
@@ -37,7 +37,7 @@ border-radius: 10px;
 export const FeatureText = styled.p`
 text-align: center;
 margin-top: 80px;
-font-size: 30px;
+font-size: 28px;
 font-weight: 500;
 
 `
