@@ -34,22 +34,7 @@ export const CarItem = styled.li`
   }
 `;
 
-export const InfoBtn = styled.button`
-display: block;
-width: 100%;
-padding: 12px;
-color: #ffffff;
-background-color: #3470FF;
-border-radius: 12px;
-border: none;
-cursor: pointer;
 
-&:hover {
-    background-color: #0B44CD;
-  }
-
-
-`
 
 export const BackToTopBtn = styled.button`
 position: fixed;
@@ -64,14 +49,3 @@ border-radius: 50%;
 cursor: pointer;
 `
 
-export const FavoriteBtn = styled.button`
-position: absolute;
-top: 10px;
-right: 10px;
-
-background-color: transparent;
-border: none;
-outline: none;
-cursor: pointer;
-
-`

@@ -6,11 +6,9 @@ import { useLocalStorage } from 'hooks/useLocalStorage';
 
 import { useEffect, useState } from 'react';
 
-import { Cars, CarItem,InfoBtn, BackToTopBtn, FavoriteBtn} from './FavoriteCarsList.styled';
+import { Cars, BackToTopBtn} from './FavoriteCarsList.styled';
 
-import { AiOutlineHeart } from "react-icons/ai";
-import { AiFillHeart } from "react-icons/ai";
-
+import { CarItem } from 'components/CarItem/CarItem';
 
 export const FavoriteCarsList = () => {
 
@@ -67,14 +65,7 @@ export const FavoriteCarsList = () => {
         <>
         <Cars id="catalog">
              {favorites?.map(car => (
-             <CarItem key={car.id}>
-                <img src={car.img} alt="" width={260} height={200}/>
-                    <p> {car.make} {car.model} {car.year} {car.rentalPrice}</p>
-                    <p> {car.address} {car.rentalCompany}</p>
-                    <p> {car.type} {car.mileage} {car.accessories[0]}</p>
-                    <InfoBtn type='button' onClick={() => toogleModal(car)}>Learn More</InfoBtn>
-                    <FavoriteBtn onClick={() => toogleToFavorite(car)}>{favorites.find(favCar => favCar.id === car.id) ?  <AiFillHeart size='24px' color='#3470FF'/> : <AiOutlineHeart size='24px' color='#ffffff'/>}</FavoriteBtn>
-             </CarItem>   
+            <CarItem key={car.id} car={car} favorites={favorites} toogleModal={toogleModal} toogleToFavorite={toogleToFavorite}/> 
              )) }
         </Cars>
         {isModalOpen && (
