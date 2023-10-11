@@ -4,10 +4,8 @@ import styled, { keyframes } from 'styled-components';
 
 
 export const HeaderBar = styled.header`
-max-width: 1440px;
-margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border-bottom: 2px solid  #696969;
   padding: 0px 20px;

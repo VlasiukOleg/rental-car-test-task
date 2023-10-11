@@ -1,13 +1,15 @@
 import { Container } from "components/Container/Container";
 import { Features } from "components/Features/Features";
 
-import {WelcomeTitle} from './WelcomePage.styled';
+import {WelcomeTitle, WelcomePageWrap, LogoWrap} from './WelcomePage.styled';
 
 const WelcomePage = () => {
     return (
         <Container>
-            <WelcomeTitle>Discover the freedom of the open road with  Rent <span>-and-</span> Ride! </WelcomeTitle>
-            <Features/>
+            <WelcomePageWrap>
+                <WelcomeTitle>Discover the freedom of the open road with <LogoWrap>Rent <span>-and-</span> Ride! </LogoWrap> </WelcomeTitle>
+                <Features/>
+            </WelcomePageWrap>  
         </Container>
         
     )

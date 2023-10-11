@@ -10,10 +10,10 @@ export const Features = () => {
     return (
         <>
         <FeaturesList>
-            <FeaturesItem><ItemWrap><IoCarSportOutline size='24px' color=" #3470FF"/>A wide selection of high-quality vehicles.</ItemWrap></FeaturesItem>
-            <FeaturesItem><ItemWrap><AiOutlineLaptop size='24px' color=" #3470FF"/>Convenient online booking service.</ItemWrap></FeaturesItem>
-            <FeaturesItem><ItemWrap><RiTeamLine size='24px' color=" #3470FF"/>Professional team ready to assist.</ItemWrap></FeaturesItem>
-            <FeaturesItem><ItemWrap><FaRegHandshake size='24px' color=" #3470FF"/>Experience and reputation as a reliable partner.</ItemWrap></FeaturesItem>
+            <FeaturesItem><ItemWrap><IoCarSportOutline size='30px' color=" #3470FF"/><span>A wide selection of high-quality vehicles.</span></ItemWrap></FeaturesItem>
+            <FeaturesItem><ItemWrap><AiOutlineLaptop size='30px' color=" #3470FF"/><span>Convenient online booking service.</span></ItemWrap></FeaturesItem>
+            <FeaturesItem><ItemWrap><RiTeamLine size='30px' color=" #3470FF"/><span>Professional team ready to assist.</span></ItemWrap></FeaturesItem>
+            <FeaturesItem><ItemWrap><FaRegHandshake size='30px' color=" #3470FF"/><span>Experience and reputation as a reliable partner.</span></ItemWrap></FeaturesItem>
         </FeaturesList>
         <FeatureText>Choose us and experience these advantages for yourself!</FeatureText>
         </>

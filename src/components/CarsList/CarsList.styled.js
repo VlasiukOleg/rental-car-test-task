@@ -52,15 +52,15 @@ cursor: pointer;
 `
 
 export const BackToTopBtn = styled.button`
+padding: 10px;
 position: fixed;
-bottom: 20px;
-right: 50px;
-width: 40px;
+bottom: 40px;
+right: 70px;
 height: 40px;
 z-index: 99;
+background-color: transparent;
 border: none;
 outline: none;
-border-radius: 50%;
 cursor: pointer;
 `
 
