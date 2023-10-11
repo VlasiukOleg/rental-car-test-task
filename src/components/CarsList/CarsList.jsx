@@ -12,13 +12,13 @@ import { useLocalStorage } from 'hooks/useLocalStorage';
 
 import { useEffect, useState } from 'react';
 
-import { Cars, CarItem,InfoBtn, BackToTopBtn, FavoriteBtn} from './CarsList.styled';
+import { Cars,  BackToTopBtn} from './CarsList.styled';
 
-import { AiOutlineHeart } from "react-icons/ai";
-import { AiFillHeart } from "react-icons/ai";
+
 import { BsArrowUpCircle } from "react-icons/bs";
 
-import noImage from '../../assets/images/noimage.jpeg'
+
+import { CarItem } from 'components/CarItem/CarItem';
 
 
 const perPage = 8;
@@ -47,10 +47,6 @@ export const CarsList = () => {
       
     };
 
-    const handleError = (e) => {
-          e.target.onerror = null; // Вимикаємо подальшу обробку помилки, щоб уникнути зациклення
-          e.target.src = noImage; // Змінюємо src на дефолтне зображення у разі помилки
-    }
 
     const toogleModal = (car) => {
         setIsModalOpen(prevState => !prevState);
@@ -106,15 +102,9 @@ export const CarsList = () => {
         <>
         <Cars id="catalog">
              {cars?.map(car => (
-             <CarItem key={car.id}>
-                <img src={car.img} alt={car.make} onError={handleError} width={260} height={200}/>
-                    <p> {car.make} {car.model} {car.year} {car.rentalPrice}</p>
-                    <p> {car.address} {car.rentalCompany}</p>
-                    <p> {car.type} {car.mileage} {car.accessories[0]}</p>
-                    <InfoBtn type='button' onClick={() => toogleModal(car)}>Learn More</InfoBtn>
-                    <FavoriteBtn onClick={() => toogleToFavorite(car)}>{favorites.find(favCar => favCar.id === car.id) ?  <AiFillHeart size='24px' color='#3470FF'/> : <AiOutlineHeart size='24px' color='#ffffff'/>}</FavoriteBtn>
-             </CarItem>   
-             )) }
+             <CarItem car={car} favorites={favorites} toogleModal={toogleModal} toogleToFavorite={toogleToFavorite}/>
+                
+             ))}
         </Cars>
         {isLoadMore && (
         <LoadMoreButton handleLoadMoreButton={handleLoadMoreButton}/>
