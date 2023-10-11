@@ -31,9 +31,9 @@ Rent-and-Ride  – ваш надійний помічник у подорожа�
 
 # Використанні технології 
 
-HTML
-JavaScript
-React
-Redux Toolkit
-Styled Component
-mockApi
+* HTML
+* JavaScript
+* React
+* Redux Toolkit
+* Styled Component
+* mockApi
