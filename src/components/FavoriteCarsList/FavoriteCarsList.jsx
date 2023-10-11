@@ -1,4 +1,4 @@
-
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import { ModalCarInfo } from 'components/ModalCarInfo/ModalCarInfo';
 
@@ -33,6 +33,7 @@ export const FavoriteCarsList = () => {
       } else {
         const updatedFavorites = favorites.filter(favCar => favCar.id !== car.id);
         setFavorites(updatedFavorites);
+        Notify.failure('Successfully removed from favorites');
       }
      }
 

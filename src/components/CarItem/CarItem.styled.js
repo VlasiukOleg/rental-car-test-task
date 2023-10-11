@@ -16,11 +16,36 @@ export const CarsItem = styled.li`
   }
 
   img:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
     cursor: zoom-in;
   }
 `;
 
+export const CarInfoWrap = styled.div`
+padding: 14px 4px 28px 4px;
+`
+
+export const CarInfo = styled.div`
+display: flex;
+justify-content: space-between;
+font-weight: 500;
+margin-bottom: 8px;
+
+span {
+    color: #0B44CD;
+}
+`
+
+export const CompanyInfo = styled.p`
+font-size: 12px;
+color: rgb(18,20,23, 50%);
+margin-bottom: 4px;
+`
+
+export const CarAddInfo = styled.p`
+font-size: 12px;
+color: rgb(18,20,23, 50%);
+`
 
 export const InfoBtn = styled.button`
 display: block;

@@ -54,7 +54,7 @@ export const CustomModal = ({
         modalDesktopStyles={modalDesktopStyles}
       >
         <CloseModalBtn type="button" onClick={onClose}>
-          x
+          X
         </CloseModalBtn>
         {children}
       </Modal>

@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCars} from 'redux/selectors';
 import { fetchCars } from 'redux/operations';
 
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 import { ModalCarInfo } from 'components/ModalCarInfo/ModalCarInfo';
 import { LoadMoreButton } from 'components/LoadMoreBtn/LoadMoreBtn';
 
@@ -57,10 +59,17 @@ export const CarsList = () => {
       
       if (!favorites.find(favCar => favCar.id === car.id)) {
         setFavorites([...favorites, car]);
+       
+          Notify.success('Successfully added to favorites');
+        
+        
       } else {
         const updatedFavorites = favorites.filter(favCar => favCar.id !== car.id);
         setFavorites(updatedFavorites);
+        Notify.failure('Successfully removed from favorites');
       }
+
+
      }
 
      const handleScroll = () => {
@@ -102,7 +111,7 @@ export const CarsList = () => {
         <>
         <Cars id="catalog">
              {cars?.map(car => (
-             <CarItem car={car} favorites={favorites} toogleModal={toogleModal} toogleToFavorite={toogleToFavorite}/>
+             <CarItem key={car.id} car={car} favorites={favorites} toogleModal={toogleModal} toogleToFavorite={toogleToFavorite}/>
                 
              ))}
         </Cars>

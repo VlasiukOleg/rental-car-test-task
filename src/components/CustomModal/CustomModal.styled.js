@@ -18,9 +18,7 @@ export const Modal = styled.div`
 
   transform: translate(-50%, -50%);
 
-  width: 600px;
-  height: 300px;
-  padding: 40px;
+ 
   max-height: 95%;
   overflow-y: auto;
 
@@ -44,10 +42,12 @@ export const Modal = styled.div`
 `;
 
 export const CloseModalBtn = styled.button`
+  font-size:16px;
+  font-weight: 700;
   position: absolute;
-  top: 5px;
-  right: 5px;
-  background-color: #10100f;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;

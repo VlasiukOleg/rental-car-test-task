@@ -1,5 +1,5 @@
 
-import { CarsItem, InfoBtn, FavoriteBtn } from "./CarItem.styled"
+import { CarsItem, InfoBtn, FavoriteBtn,CarInfo, CompanyInfo, CarAddInfo, CarInfoWrap} from "./CarItem.styled"
 
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from "react-icons/ai";
@@ -15,11 +15,13 @@ export const CarItem = ({car, favorites, toogleModal, toogleToFavorite}) => {
   
 
     return (
-        <CarsItem key={car.id}>
+        <CarsItem>
                 <img src={car.img} alt={car.make} onError={handleError} width={274} height={268}/>
-                <p> {car.make} {car.model} {car.year} {car.rentalPrice}</p>
-                <p> {car.address} {car.rentalCompany}</p>
-                <p> {car.type} {car.mileage} {car.accessories[0]}</p>
+                <CarInfoWrap>
+                    <CarInfo><div>{car.make} <span>{car.model}</span>, {car.year} </div> {car.rentalPrice}</CarInfo>
+                    <CompanyInfo> {car.address} | {car.rentalCompany}</CompanyInfo>
+                    <CarAddInfo> {car.type} | {car.mileage} | {car.accessories[0]}</CarAddInfo>
+                </CarInfoWrap>
                 <InfoBtn type='button' onClick={() => toogleModal(car)}>Learn More</InfoBtn>
                 <FavoriteBtn onClick={() => toogleToFavorite(car)}>{favorites.find(favCar => favCar.id === car.id) ?  <AiFillHeart size='24px' color='#3470FF'/> : <AiOutlineHeart size='24px' color='#ffffff'/>}</FavoriteBtn>
         </CarsItem>   
