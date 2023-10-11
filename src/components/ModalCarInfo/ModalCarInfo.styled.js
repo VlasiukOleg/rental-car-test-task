@@ -132,6 +132,13 @@ span {
 }
 `
 
+export const Span = styled.span`
+ color: #3470FF;
+`
+
+export const AgeTitle = styled.span`
+color: black;
+`
 
 export const CarPrice = styled.p`
 font-size: 12px;  

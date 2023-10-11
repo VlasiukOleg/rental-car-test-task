@@ -3,7 +3,7 @@ import { CustomModal } from "components/CustomModal/CustomModal";
 
 import { RentalCarLink, CarImgWrap, CarModelInfo, CarAddress, CarEngineInfo, CarDescription, CarAccessoriesTitle, 
   CarAccessoriesInfo, CarFunctionalitiesInfo, CarRentalConditionsTitle, CarRentalConditionsList, CarRentalConditionsItem, 
-  CarMileage, CarPrice, CarMileagePriceWrap, LinkWrap} from "./ModalCarInfo.styled";
+  CarMileage, CarPrice, CarMileagePriceWrap, LinkWrap, Span, AgeTitle} from "./ModalCarInfo.styled";
 
 
   function addCommas(number) {
@@ -13,6 +13,9 @@ import { RentalCarLink, CarImgWrap, CarModelInfo, CarAddress, CarEngineInfo, Car
 
 
 export const ModalCarInfo = ({onToogle, carInfo}) => {
+
+    const text = carInfo.rentalConditions.split('\n');
+    console.log(text);
 
     return (
         <CustomModal onClose={onToogle}
@@ -34,7 +37,10 @@ export const ModalCarInfo = ({onToogle, carInfo}) => {
         <CarAccessoriesInfo>{carInfo.accessories.join(' | ')}</CarAccessoriesInfo>
         <CarFunctionalitiesInfo>{carInfo.functionalities.join(' | ')}</CarFunctionalitiesInfo>
         <CarRentalConditionsTitle>Rental Conditions:</CarRentalConditionsTitle>
-        <CarRentalConditionsList>{carInfo.rentalConditions.split('\n').map((item, index) => <CarRentalConditionsItem key={index}>{item}</CarRentalConditionsItem>)}</CarRentalConditionsList>
+        <CarRentalConditionsList>{carInfo.rentalConditions.split('\n').map((item, index) => <CarRentalConditionsItem key={index}>{index === 0
+            ? <><AgeTitle>{item.replace(/\d+/g, '')}</AgeTitle> <Span>{parseInt(item.match(/\d+/))}</Span></>
+            : item
+          }</CarRentalConditionsItem>)}</CarRentalConditionsList>
         <CarMileagePriceWrap>
           <CarMileage>Mileage: <span>{addCommas(carInfo.mileage)}</span></CarMileage>
           <CarPrice> Price: <span>{carInfo.rentalPrice}</span></CarPrice>

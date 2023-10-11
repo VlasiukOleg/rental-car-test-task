@@ -20,6 +20,7 @@ export const App = () => {
         <Route index element={<WelcomePage/>}/>
         <Route path='catalog' element={<CatalogPage/>}/>
         <Route path='favorite' element={<FavoritesPage/>}/>
+        <Route path="*" element={<WelcomePage/>} />
       </Route>
     </Routes>
   );
